@@ -36,9 +36,13 @@ def parse_args():
 
 def main():
     args = parse_args()
-    product_dir = "./products/"
-    
+    product_dir = "./products/petstore"
+    product_file = os.path.join(product_dir, 'petstore-simple.json')
 
+    if os.path.exists(product_file):
+        print("Reading %s" % product_file)
+
+    
 
 if __name__ == '__main__':
     main()
